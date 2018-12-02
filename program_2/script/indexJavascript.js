@@ -45,7 +45,8 @@ $(document).ready(function () {
             let question1 = $(this).find('div:nth-child(2) option:selected').text();
             let question2 = $(this).find('div:nth-child(3) option:selected').text();
             let question3 = $(this).find('div:nth-child(4) option:selected').text();
-            
+
+//form validation, checking if name is empty
             if( name === '' ) {
                 $(this).find('div:nth-child(1) input').css('background-color', '#ff9999');
                 $(this).find('div:nth-child(1) input').attr('placeholder','please enter a valid name');
@@ -54,7 +55,7 @@ $(document).ready(function () {
                 $(this).find('div:nth-child(1) input').css('background-color', '');
                 count++;
             }
-
+//form validation, checking if response for question1 is empty
             if( question1 == 'select' ) {
                 $(this).find('div:nth-child(2) select').css('background-color', '#ff9999');
 
@@ -63,6 +64,7 @@ $(document).ready(function () {
                 count++;
             }
 
+//form validation, checking if response for question2 is empty
             if( question2 == 'select' ) { 
                 $(this).find('div:nth-child(3) select').css('background-color', '#ff9999');
 
@@ -71,6 +73,7 @@ $(document).ready(function () {
                 count++;
             }
 
+//form validation, checking if response for question3 is empty            
             if( question3 == 'select' ) {
                 $(this).find('div:nth-child(4) select').css('background-color', '#ff9999');
             } else {
@@ -95,7 +98,7 @@ $(document).ready(function () {
 
         if( flag == 1 ) {
 
-
+//ajax call to hit the nodejs server with user input
             $.ajax({
                 type: "POST",
                 url: 'http://127.0.0.1:8000/',
@@ -129,13 +132,14 @@ $(document).ready(function () {
     });
 
 
-    
+//add a new item    
     $('#addItem').click(function (){
         
         $('.newItem').append(htmlCode)
 
     });
 
+//delete a item    
     $('#deleteItem').click(function (){
 
         $('.newItem form').last().remove();
