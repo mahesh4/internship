@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" type='text/css'  href="style.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Custom javascript-->
+    <script src="indexJavascript.js"></script>
+</head>
+  <body>
+    <div class="container">
+        <div class="col-sm-12">
+            <div>
+                <a class="btn btn-primary add-item" role="button" id="addItem">
+                  Add item
+                </a>
+                <a class="btn btn-danger delete-item" role="button" id="deleteItem">
+                  Delete item
+                </a>
+              </div>
+              <br>
+              <div class="newItem">
+                    <form id="classifyItem">
+                            <div class="form-group row">
+                                <label for="item-name" class="col-sm-2 col-form-label" >Name</label>
+                                <input type="text" class="form-control col-sm-10" id="item-name" placeholder="Enter name of the item">
+                            </div>
+                            <div class="form-group row">
+                                <label for="ControlSelect1" class="col-sm-2 col-form-label">Does it smell?</label>
+                                <select class="form-control col-sm-10" id="ControlSelect1">
+                                    <option>select</option>
+                                    <option>yes</option>
+                                    <option>no</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="ControlSelect2" class="col-sm-2 col-form-label">Is it edible?</label>
+                                <select class="form-control col-sm-10" id="ControlSelect2">
+                                        <option>select</option>
+                                        <option>yes</option>
+                                        <option>no</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label for="ControlSelect3" class="col-sm-2 col-form-label">Are you a vegan?</label>
+                                <select class="form-control col-sm-10" id="ControlSelect3">
+                                        <option>select</option>
+                                        <option>yes</option>
+                                        <option>no</option>
+                                </select>
+                            </div>
+                            <hr>
+                    </form>
+              </div>
+              <input class="btn btn-primary btn-block" type="button" id="submitButton" value="submit">
+        </div>   
+
+        <div class="modal" tabindex="-1" role="dialog" id="myModal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+        </div>
+    </div>
+
+    
+  </body>
+</html>
